@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/ise/DDP/xilinx project/FFT8_implementation_1/fft8_tb_isim_beh.exe" -prj "/home/ise/DDP/xilinx project/FFT8_implementation_1/fft8_tb_beh.prj" "work.fft8_tb" "work.glbl" 

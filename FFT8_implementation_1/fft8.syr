@@ -1,0 +1,551 @@
+Release 14.7 - xst P.20160913 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Reading design: fft8.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "fft8.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "fft8"
+Output Format                      : NGC
+Target Device                      : xa6slx4-3-csg225
+
+---- Source Options
+Top Module Name                    : fft8
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/ise/DDP/xilinx project/FFT8_implementation_1/fft8.v" into library work
+Parsing module <fft8>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <fft8>.
+"/home/ise/DDP/xilinx project/FFT8_implementation_1/fft8.v" Line 76. $display out1: 0.000000 , 0.000000 
+"/home/ise/DDP/xilinx project/FFT8_implementation_1/fft8.v" Line 77. $display out2: 0.000000 , 0.000000 
+"/home/ise/DDP/xilinx project/FFT8_implementation_1/fft8.v" Line 78. $display out3: 0.000000 , 0.000000 
+"/home/ise/DDP/xilinx project/FFT8_implementation_1/fft8.v" Line 79. $display out4: 0.000000 , 0.000000 
+"/home/ise/DDP/xilinx project/FFT8_implementation_1/fft8.v" Line 80. $display out5: 0.000000 , 0.000000 
+"/home/ise/DDP/xilinx project/FFT8_implementation_1/fft8.v" Line 81. $display out6: 0.000000 , 0.000000 
+"/home/ise/DDP/xilinx project/FFT8_implementation_1/fft8.v" Line 82. $display out7: 0.000000 , 0.000000 
+"/home/ise/DDP/xilinx project/FFT8_implementation_1/fft8.v" Line 83. $display out8: 0.000000 , 0.000000 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <fft8>.
+    Related source file is "/home/ise/DDP/xilinx project/FFT8_implementation_1/fft8.v".
+    Found 16-bit register for signal <out1_real>.
+    Found 16-bit register for signal <out3_imag>.
+    Found 16-bit register for signal <out3_real>.
+    Found 16-bit register for signal <out5_real>.
+    Found 16-bit register for signal <out2_real>.
+    Found 16-bit register for signal <out4_real>.
+    Found 16-bit register for signal <out2_imag>.
+    Found 16-bit register for signal <out6_imag>.
+    Found 1-bit register for signal <out_stb>.
+    Found 16-bit subtractor for signal <n0146> created at line 58.
+    Found 16-bit subtractor for signal <n0149> created at line 59.
+    Found 16-bit subtractor for signal <inp2[15]_inp6[15]_sub_9_OUT> created at line 60.
+    Found 16-bit subtractor for signal <inp4[15]_inp8[15]_sub_10_OUT> created at line 61.
+    Found 17-bit subtractor for signal <inp2[15]_inp4[15]_sub_14_OUT> created at line 65.
+    Found 16-bit subtractor for signal <inp4[15]_inp2[15]_sub_16_OUT> created at line 67.
+    Found 16-bit subtractor for signal <inp1[15]_inp7[15]_sub_17_OUT> created at line 68.
+    Found 16-bit subtractor for signal <inp1[15]_inp4[15]_sub_18_OUT> created at line 69.
+    Found 16-bit subtractor for signal <inp1[15]_GND_1_o_sub_22_OUT> created at line 73.
+    Found 16-bit subtractor for signal <inp7[15]_PWR_1_o_sub_24_OUT> created at line 75.
+    Found 16-bit adder for signal <n0137> created at line 54.
+    Found 16-bit adder for signal <n0138> created at line 55.
+    Found 16-bit adder for signal <n0135> created at line 56.
+    Found 16-bit adder for signal <n0134> created at line 57.
+    Found 16-bit adder for signal <n0141> created at line 62.
+    Found 16-bit adder for signal <n0140> created at line 63.
+    Found 16-bit adder for signal <inp1[15]_inp4[15]_add_12_OUT> created at line 64.
+    Found 17-bit adder for signal <inp2[15]_inp4[15]_add_18_OUT> created at line 70.
+    Found 16-bit adder for signal <inp1[15]_GND_1_o_add_20_OUT> created at line 72.
+    Found 16-bit adder for signal <inp7[15]_PWR_1_o_add_22_OUT> created at line 74.
+    Found 16-bit adder for signal <out4_imag> created at line 94.
+    Found 16-bit adder for signal <out7_imag> created at line 100.
+    Found 16-bit adder for signal <out8_imag> created at line 102.
+    Found 9x17-bit multiplier for signal <n0097> created at line 65.
+    Found 9x17-bit multiplier for signal <n0102> created at line 70.
+    Summary:
+	inferred   2 Multiplier(s).
+	inferred  23 Adder/Subtractor(s).
+	inferred 129 D-type flip-flop(s).
+Unit <fft8> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 2
+ 17x9-bit multiplier                                   : 2
+# Adders/Subtractors                                   : 23
+ 16-bit adder                                          : 12
+ 16-bit subtractor                                     : 9
+ 17-bit adder                                          : 1
+ 17-bit subtractor                                     : 1
+# Registers                                            : 9
+ 1-bit register                                        : 1
+ 16-bit register                                       : 8
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <fft8>.
+	Adder/Subtractor <Msub_inp2[15]_inp4[15]_sub_14_OUT> in block <fft8> and  <Mmult_n0097> in block <fft8> are combined into a MULT with pre-adder <Mmult_n00971>.
+	Adder/Subtractor <Madd_inp2[15]_inp4[15]_add_18_OUT> in block <fft8> and  <Mmult_n0102> in block <fft8> are combined into a MULT with pre-adder <Mmult_n01021>.
+Unit <fft8> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# MACs                                                 : 2
+ 9x17-to-26-bit Mult with pre-adder                    : 2
+# Adders/Subtractors                                   : 21
+ 16-bit adder                                          : 12
+ 16-bit subtractor                                     : 9
+# Registers                                            : 129
+ Flip-Flops                                            : 129
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <fft8> ...
+INFO:Xst:2261 - The FF/Latch <m0_0> in Unit <fft8> is equivalent to the following FF/Latch, which will be removed : <m1_0> 
+INFO:Xst:2261 - The FF/Latch <s1_0> in Unit <fft8> is equivalent to the following FF/Latch, which will be removed : <s2_0> 
+INFO:Xst:2261 - The FF/Latch <s3_imag_0> in Unit <fft8> is equivalent to the following FF/Latch, which will be removed : <s4_imag_0> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block fft8, actual ratio is 14.
+FlipFlop m0_0 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s1_15 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s1_14 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s1_13 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s1_12 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s1_11 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s1_10 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s1_9 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s1_8 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s1_7 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s1_6 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s1_5 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s1_4 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s1_3 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s1_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s1_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s1_0 has been replicated 3 time(s) to handle iob=true attribute.
+FlipFlop s3_imag_15 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s3_imag_14 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s3_imag_13 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s3_imag_12 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s3_imag_11 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s3_imag_10 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s3_imag_9 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s3_imag_8 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s3_imag_7 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s3_imag_6 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s3_imag_5 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s3_imag_4 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s3_imag_3 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s3_imag_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s3_imag_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s3_imag_0 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop m2_15 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop m2_14 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop m2_13 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop m2_12 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop m2_11 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop m2_10 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop m2_9 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop m2_8 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop m2_7 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop m2_6 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop m2_5 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop m2_4 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop m2_3 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop m2_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop m2_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop m2_0 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop m5_imag_15 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop m5_imag_14 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop m5_imag_13 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop m5_imag_12 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop m5_imag_11 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop m5_imag_10 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop m5_imag_9 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop m5_imag_8 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop m5_imag_7 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop m5_imag_6 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop m5_imag_5 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop m5_imag_4 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop m5_imag_3 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop m5_imag_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop m5_imag_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop m5_imag_0 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s2_15 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s2_14 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s2_13 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s2_12 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s2_11 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s2_10 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s2_9 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s2_8 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s2_7 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s2_6 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s2_5 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s2_4 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s2_3 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s2_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s2_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s4_imag_15 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s4_imag_14 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s4_imag_13 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s4_imag_12 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s4_imag_11 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s4_imag_10 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s4_imag_9 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s4_imag_8 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s4_imag_7 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s4_imag_6 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s4_imag_5 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s4_imag_4 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s4_imag_3 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s4_imag_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop s4_imag_1 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 224
+ Flip-Flops                                            : 224
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : fft8.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 987
+#      GND                         : 1
+#      INV                         : 46
+#      LUT1                        : 3
+#      LUT2                        : 288
+#      MUXCY                       : 315
+#      VCC                         : 1
+#      XORCY                       : 333
+# FlipFlops/Latches                : 224
+#      FD                          : 1
+#      FDE                         : 223
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 386
+#      IBUF                        : 129
+#      OBUF                        : 257
+# DSPs                             : 2
+#      DSP48A1                     : 2
+
+Device utilization summary:
+---------------------------
+
+Selected Device : xa6slx4csg225-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              47  out of   4800     0%  
+ Number of Slice LUTs:                  337  out of   2400    14%  
+    Number used as Logic:               337  out of   2400    14%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    337
+   Number with an unused Flip Flop:     290  out of    337    86%  
+   Number with an unused LUT:             0  out of    337     0%  
+   Number of fully used LUT-FF pairs:    47  out of    337    13%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                         387
+ Number of bonded IOBs:                 387  out of    132   293% (*) 
+    IOB Flip Flops/Latches:             177
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of DSP48A1s:                      2  out of      8    25%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 224   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 9.307ns
+   Maximum output required time after clock: 5.037ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 1284474 / 447
+-------------------------------------------------------------------------
+Offset:              9.307ns (Levels of Logic = 36)
+  Source:            inp2<0> (PAD)
+  Destination:       s1_15 (FF)
+  Destination Clock: clk rising
+
+  Data Path: inp2<0> to s1_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.222   0.721  inp2_0_IBUF (inp2_0_IBUF)
+     LUT2:I0->O            1   0.203   0.000  Msub_inp2[15]_inp6[15]_sub_9_OUT_lut<0> (Msub_inp2[15]_inp6[15]_sub_9_OUT_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Msub_inp2[15]_inp6[15]_sub_9_OUT_cy<0> (Msub_inp2[15]_inp6[15]_sub_9_OUT_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_inp2[15]_inp6[15]_sub_9_OUT_cy<1> (Msub_inp2[15]_inp6[15]_sub_9_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_inp2[15]_inp6[15]_sub_9_OUT_cy<2> (Msub_inp2[15]_inp6[15]_sub_9_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_inp2[15]_inp6[15]_sub_9_OUT_cy<3> (Msub_inp2[15]_inp6[15]_sub_9_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_inp2[15]_inp6[15]_sub_9_OUT_cy<4> (Msub_inp2[15]_inp6[15]_sub_9_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_inp2[15]_inp6[15]_sub_9_OUT_cy<5> (Msub_inp2[15]_inp6[15]_sub_9_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_inp2[15]_inp6[15]_sub_9_OUT_cy<6> (Msub_inp2[15]_inp6[15]_sub_9_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_inp2[15]_inp6[15]_sub_9_OUT_cy<7> (Msub_inp2[15]_inp6[15]_sub_9_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_inp2[15]_inp6[15]_sub_9_OUT_cy<8> (Msub_inp2[15]_inp6[15]_sub_9_OUT_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_inp2[15]_inp6[15]_sub_9_OUT_cy<9> (Msub_inp2[15]_inp6[15]_sub_9_OUT_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_inp2[15]_inp6[15]_sub_9_OUT_cy<10> (Msub_inp2[15]_inp6[15]_sub_9_OUT_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_inp2[15]_inp6[15]_sub_9_OUT_cy<11> (Msub_inp2[15]_inp6[15]_sub_9_OUT_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_inp2[15]_inp6[15]_sub_9_OUT_cy<12> (Msub_inp2[15]_inp6[15]_sub_9_OUT_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_inp2[15]_inp6[15]_sub_9_OUT_cy<13> (Msub_inp2[15]_inp6[15]_sub_9_OUT_cy<13>)
+     MUXCY:CI->O           0   0.019   0.000  Msub_inp2[15]_inp6[15]_sub_9_OUT_cy<14> (Msub_inp2[15]_inp6[15]_sub_9_OUT_cy<14>)
+     XORCY:CI->O           6   0.180   0.744  Msub_inp2[15]_inp6[15]_sub_9_OUT_xor<15> (inp2[15]_inp6[15]_sub_9_OUT<15>)
+     DSP48A1:D15->M8       2   4.257   0.617  Mmult_n00971 (n0097<8>)
+     LUT2:I1->O            1   0.205   0.000  Msub_inp1[15]_GND_1_o_sub_22_OUT_lut<0> (Msub_inp1[15]_GND_1_o_sub_22_OUT_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Msub_inp1[15]_GND_1_o_sub_22_OUT_cy<0> (Msub_inp1[15]_GND_1_o_sub_22_OUT_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_inp1[15]_GND_1_o_sub_22_OUT_cy<1> (Msub_inp1[15]_GND_1_o_sub_22_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_inp1[15]_GND_1_o_sub_22_OUT_cy<2> (Msub_inp1[15]_GND_1_o_sub_22_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_inp1[15]_GND_1_o_sub_22_OUT_cy<3> (Msub_inp1[15]_GND_1_o_sub_22_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_inp1[15]_GND_1_o_sub_22_OUT_cy<4> (Msub_inp1[15]_GND_1_o_sub_22_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_inp1[15]_GND_1_o_sub_22_OUT_cy<5> (Msub_inp1[15]_GND_1_o_sub_22_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_inp1[15]_GND_1_o_sub_22_OUT_cy<6> (Msub_inp1[15]_GND_1_o_sub_22_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_inp1[15]_GND_1_o_sub_22_OUT_cy<7> (Msub_inp1[15]_GND_1_o_sub_22_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_inp1[15]_GND_1_o_sub_22_OUT_cy<8> (Msub_inp1[15]_GND_1_o_sub_22_OUT_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_inp1[15]_GND_1_o_sub_22_OUT_cy<9> (Msub_inp1[15]_GND_1_o_sub_22_OUT_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_inp1[15]_GND_1_o_sub_22_OUT_cy<10> (Msub_inp1[15]_GND_1_o_sub_22_OUT_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_inp1[15]_GND_1_o_sub_22_OUT_cy<11> (Msub_inp1[15]_GND_1_o_sub_22_OUT_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_inp1[15]_GND_1_o_sub_22_OUT_cy<12> (Msub_inp1[15]_GND_1_o_sub_22_OUT_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_inp1[15]_GND_1_o_sub_22_OUT_cy<13> (Msub_inp1[15]_GND_1_o_sub_22_OUT_cy<13>)
+     MUXCY:CI->O           0   0.019   0.000  Msub_inp1[15]_GND_1_o_sub_22_OUT_cy<14> (Msub_inp1[15]_GND_1_o_sub_22_OUT_cy<14>)
+     XORCY:CI->O           2   0.180   0.000  Msub_inp1[15]_GND_1_o_sub_22_OUT_xor<15> (inp1[15]_GND_1_o_sub_22_OUT<15>)
+     FDE:D                     0.102          s2_15
+    ----------------------------------------
+    Total                      9.307ns (7.225ns logic, 2.082ns route)
+                                       (77.6% logic, 22.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 585 / 225
+-------------------------------------------------------------------------
+Offset:              5.037ns (Levels of Logic = 18)
+  Source:            s3_imag_0 (FF)
+  Destination:       out4_imag<15> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: s3_imag_0 to out4_imag<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.447   0.617  s3_imag_0 (s3_imag_0)
+     LUT1:I0->O            1   0.205   0.000  Madd_out8_imag_cy<0>_rt (Madd_out8_imag_cy<0>_rt)
+     MUXCY:S->O            1   0.172   0.000  Madd_out8_imag_cy<0> (Madd_out8_imag_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out8_imag_cy<1> (Madd_out8_imag_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out8_imag_cy<2> (Madd_out8_imag_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out8_imag_cy<3> (Madd_out8_imag_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out8_imag_cy<4> (Madd_out8_imag_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out8_imag_cy<5> (Madd_out8_imag_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out8_imag_cy<6> (Madd_out8_imag_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out8_imag_cy<7> (Madd_out8_imag_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out8_imag_cy<8> (Madd_out8_imag_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out8_imag_cy<9> (Madd_out8_imag_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out8_imag_cy<10> (Madd_out8_imag_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out8_imag_cy<11> (Madd_out8_imag_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out8_imag_cy<12> (Madd_out8_imag_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out8_imag_cy<13> (Madd_out8_imag_cy<13>)
+     MUXCY:CI->O           0   0.019   0.000  Madd_out8_imag_cy<14> (Madd_out8_imag_cy<14>)
+     XORCY:CI->O           1   0.180   0.579  Madd_out8_imag_xor<15> (out8_imag_15_OBUF)
+     OBUF:I->O                 2.571          out8_imag_15_OBUF (out8_imag<15>)
+    ----------------------------------------
+    Total                      5.037ns (3.841ns logic, 1.196ns route)
+                                       (76.3% logic, 23.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 13.69 secs
+ 
+--> 
+
+
+Total memory usage is 385616 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

@@ -1,0 +1,551 @@
+Release 14.7 - xst P.20160913 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Reading design: fft8.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "fft8.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "fft8"
+Output Format                      : NGC
+Target Device                      : xa6slx4-3-csg225
+
+---- Source Options
+Top Module Name                    : fft8
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/ise/DDP/xilinx project/FFT8_implementation_2/multiplier.v" into library work
+Parsing module <multiplier>.
+Analyzing Verilog file "/home/ise/DDP/xilinx project/FFT8_implementation_2/fft8.v" into library work
+Parsing module <fft8>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <fft8>.
+
+Elaborating module <multiplier>.
+"/home/ise/DDP/xilinx project/FFT8_implementation_2/fft8.v" Line 60. $display stage-1
+"/home/ise/DDP/xilinx project/FFT8_implementation_2/fft8.v" Line 78. $display stage-2
+"/home/ise/DDP/xilinx project/FFT8_implementation_2/fft8.v" Line 94. $display out1: 0.000000 , 0.000000 
+"/home/ise/DDP/xilinx project/FFT8_implementation_2/fft8.v" Line 95. $display out2: 0.000000 , 0.000000 
+"/home/ise/DDP/xilinx project/FFT8_implementation_2/fft8.v" Line 96. $display out3: 0.000000 , 0.000000 
+"/home/ise/DDP/xilinx project/FFT8_implementation_2/fft8.v" Line 97. $display out4: 0.000000 , 0.000000 
+"/home/ise/DDP/xilinx project/FFT8_implementation_2/fft8.v" Line 98. $display out5: 0.000000 , 0.000000 
+"/home/ise/DDP/xilinx project/FFT8_implementation_2/fft8.v" Line 99. $display out6: 0.000000 , 0.000000 
+"/home/ise/DDP/xilinx project/FFT8_implementation_2/fft8.v" Line 100. $display out7: 0.000000 , 0.000000 
+"/home/ise/DDP/xilinx project/FFT8_implementation_2/fft8.v" Line 101. $display out8: 0.000000 , 0.000000 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <fft8>.
+    Related source file is "/home/ise/DDP/xilinx project/FFT8_implementation_2/fft8.v".
+    Found 16-bit register for signal <t1>.
+    Found 16-bit register for signal <t2>.
+    Found 16-bit register for signal <t3>.
+    Found 16-bit register for signal <t5>.
+    Found 16-bit register for signal <m3>.
+    Found 16-bit register for signal <m6_imag>.
+    Found 16-bit register for signal <t4>.
+    Found 16-bit register for signal <t6>.
+    Found 16-bit register for signal <t8>.
+    Found 16-bit register for signal <t7>.
+    Found 16-bit register for signal <out1_real>.
+    Found 16-bit register for signal <mult_inp1>.
+    Found 16-bit register for signal <mult_inp2>.
+    Found 2-bit register for signal <stage>.
+    Found 16-bit register for signal <m4>.
+    Found 16-bit register for signal <out3_imag>.
+    Found 16-bit register for signal <out3_real>.
+    Found 16-bit register for signal <out5_real>.
+    Found 16-bit register for signal <out2_real>.
+    Found 16-bit register for signal <out4_real>.
+    Found 16-bit register for signal <out2_imag>.
+    Found 16-bit register for signal <out6_imag>.
+    Found 1-bit register for signal <out_stb>.
+    Found finite state machine <FSM_0> for signal <stage>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Power Up State     | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16-bit subtractor for signal <inp1[15]_inp5[15]_sub_9_OUT> created at line 65.
+    Found 16-bit subtractor for signal <inp7[15]_inp3[15]_sub_10_OUT> created at line 66.
+    Found 16-bit subtractor for signal <inp2[15]_inp6[15]_sub_11_OUT> created at line 67.
+    Found 16-bit subtractor for signal <inp4[15]_inp8[15]_sub_12_OUT> created at line 68.
+    Found 16-bit subtractor for signal <inp2[15]_inp4[15]_sub_16_OUT> created at line 72.
+    Found 16-bit subtractor for signal <t5[15]_t3[15]_sub_18_OUT> created at line 80.
+    Found 16-bit subtractor for signal <t1[15]_t2[15]_sub_19_OUT> created at line 81.
+    Found 16-bit subtractor for signal <t7[15]_t8[15]_sub_20_OUT> created at line 82.
+    Found 16-bit subtractor for signal <m3[15]_m4[15]_sub_24_OUT> created at line 91.
+    Found 16-bit subtractor for signal <m6_imag[15]_mult_out[15]_sub_26_OUT> created at line 93.
+    Found 16-bit adder for signal <n0226> created at line 61.
+    Found 16-bit adder for signal <n0227> created at line 62.
+    Found 16-bit adder for signal <n0224> created at line 63.
+    Found 16-bit adder for signal <n0223> created at line 64.
+    Found 16-bit adder for signal <n0230> created at line 69.
+    Found 16-bit adder for signal <n0229> created at line 70.
+    Found 16-bit adder for signal <inp1[15]_inp4[15]_add_14_OUT> created at line 71.
+    Found 16-bit adder for signal <t4[15]_t6[15]_add_20_OUT> created at line 83.
+    Found 16-bit adder for signal <m3[15]_m4[15]_add_22_OUT> created at line 90.
+    Found 16-bit adder for signal <m6_imag[15]_mult_out[15]_add_24_OUT> created at line 92.
+    Found 16-bit adder for signal <out4_imag> created at line 114.
+    Found 16-bit adder for signal <out7_imag> created at line 120.
+    Found 16-bit adder for signal <out8_imag> created at line 122.
+    Summary:
+	inferred  22 Adder/Subtractor(s).
+	inferred 337 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <fft8> synthesized.
+
+Synthesizing Unit <multiplier>.
+    Related source file is "/home/ise/DDP/xilinx project/FFT8_implementation_2/multiplier.v".
+    Found 16x16-bit multiplier for signal <inp12> created at line 11.
+    Summary:
+	inferred   1 Multiplier(s).
+Unit <multiplier> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 16x16-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 22
+ 16-bit adder                                          : 12
+ 16-bit addsub                                         : 1
+ 16-bit subtractor                                     : 9
+# Registers                                            : 22
+ 1-bit register                                        : 1
+ 16-bit register                                       : 21
+# Multiplexers                                         : 5
+ 1-bit 2-to-1 multiplexer                              : 3
+ 16-bit 2-to-1 multiplexer                             : 2
+# FSMs                                                 : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <mult_inp2_0> (without init value) has a constant value of 1 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 16x16-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 22
+ 16-bit adder                                          : 12
+ 16-bit addsub                                         : 1
+ 16-bit subtractor                                     : 9
+# Registers                                            : 337
+ Flip-Flops                                            : 337
+# Multiplexers                                         : 5
+ 1-bit 2-to-1 multiplexer                              : 3
+ 16-bit 2-to-1 multiplexer                             : 2
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <mult_inp2_0> (without init value) has a constant value of 1 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <mult_inp2_2> in Unit <fft8> is equivalent to the following 3 FFs/Latches, which will be removed : <mult_inp2_4> <mult_inp2_5> <mult_inp2_7> 
+INFO:Xst:2261 - The FF/Latch <mult_inp2_1> in Unit <fft8> is equivalent to the following 10 FFs/Latches, which will be removed : <mult_inp2_3> <mult_inp2_6> <mult_inp2_8> <mult_inp2_9> <mult_inp2_10> <mult_inp2_11> <mult_inp2_12> <mult_inp2_13> <mult_inp2_14> <mult_inp2_15> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <stage[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 01    | 01
+ 00    | 00
+ 10    | 10
+-------------------
+
+Optimizing unit <fft8> ...
+INFO:Xst:2261 - The FF/Latch <t8_0> in Unit <fft8> is equivalent to the following FF/Latch, which will be removed : <mult_inp1_0> 
+INFO:Xst:2261 - The FF/Latch <t1_0> in Unit <fft8> is equivalent to the following FF/Latch, which will be removed : <m3_0> 
+INFO:Xst:2261 - The FF/Latch <t2_0> in Unit <fft8> is equivalent to the following FF/Latch, which will be removed : <m6_imag_0> 
+INFO:Xst:2261 - The FF/Latch <t3_0> in Unit <fft8> is equivalent to the following FF/Latch, which will be removed : <t4_0> 
+INFO:Xst:2261 - The FF/Latch <s1_0> in Unit <fft8> is equivalent to the following FF/Latch, which will be removed : <s2_0> 
+INFO:Xst:2261 - The FF/Latch <s3_imag_0> in Unit <fft8> is equivalent to the following FF/Latch, which will be removed : <s4_imag_0> 
+INFO:Xst:2261 - The FF/Latch <t5_0> in Unit <fft8> is equivalent to the following FF/Latch, which will be removed : <t6_0> 
+INFO:Xst:3203 - The FF/Latch <mult_inp2_1> in Unit <fft8> is the opposite to the following FF/Latch, which will be removed : <mult_inp2_2> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block fft8, actual ratio is 26.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 317
+ Flip-Flops                                            : 317
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : fft8.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1053
+#      GND                         : 1
+#      INV                         : 46
+#      LUT1                        : 3
+#      LUT2                        : 289
+#      LUT3                        : 3
+#      LUT4                        : 2
+#      LUT5                        : 31
+#      MUXCY                       : 330
+#      VCC                         : 1
+#      XORCY                       : 347
+# FlipFlops/Latches                : 317
+#      FD                          : 4
+#      FDE                         : 313
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 386
+#      IBUF                        : 129
+#      OBUF                        : 257
+# DSPs                             : 1
+#      DSP48A1                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : xa6slx4csg225-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             317  out of   4800     6%  
+ Number of Slice LUTs:                  374  out of   2400    15%  
+    Number used as Logic:               374  out of   2400    15%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    553
+   Number with an unused Flip Flop:     236  out of    553    42%  
+   Number with an unused LUT:           179  out of    553    32%  
+   Number of fully used LUT-FF pairs:   138  out of    553    24%  
+   Number of unique control sets:         5
+
+IO Utilization: 
+ Number of IOs:                         387
+ Number of bonded IOBs:                 387  out of    132   293% (*) 
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of DSP48A1s:                      1  out of      8    12%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 317   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 6.728ns (Maximum Frequency: 148.639MHz)
+   Minimum input arrival time before clock: 5.381ns
+   Maximum output required time after clock: 5.103ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.728ns (frequency: 148.639MHz)
+  Total number of paths / destination ports: 14015 / 458
+-------------------------------------------------------------------------
+Delay:               6.728ns (Levels of Logic = 19)
+  Source:            mult_inp2_1 (FF)
+  Destination:       s3_imag_15 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: mult_inp2_1 to s3_imag_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              15   0.447   0.981  mult_inp2_1 (mult_inp2_1)
+     INV:I->O              4   0.206   0.683  mult_inp2<10>_inv1_INV_0 (mult_inp2<10>_inv)
+     DSP48A1:A2->M8        3   2.835   0.651  mult/Mmult_inp12 (mult_out<0>)
+     LUT2:I1->O            1   0.205   0.000  Msub_m6_imag[15]_mult_out[15]_sub_26_OUT_lut<0> (Msub_m6_imag[15]_mult_out[15]_sub_26_OUT_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Msub_m6_imag[15]_mult_out[15]_sub_26_OUT_cy<0> (Msub_m6_imag[15]_mult_out[15]_sub_26_OUT_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_m6_imag[15]_mult_out[15]_sub_26_OUT_cy<1> (Msub_m6_imag[15]_mult_out[15]_sub_26_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_m6_imag[15]_mult_out[15]_sub_26_OUT_cy<2> (Msub_m6_imag[15]_mult_out[15]_sub_26_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_m6_imag[15]_mult_out[15]_sub_26_OUT_cy<3> (Msub_m6_imag[15]_mult_out[15]_sub_26_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_m6_imag[15]_mult_out[15]_sub_26_OUT_cy<4> (Msub_m6_imag[15]_mult_out[15]_sub_26_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_m6_imag[15]_mult_out[15]_sub_26_OUT_cy<5> (Msub_m6_imag[15]_mult_out[15]_sub_26_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_m6_imag[15]_mult_out[15]_sub_26_OUT_cy<6> (Msub_m6_imag[15]_mult_out[15]_sub_26_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_m6_imag[15]_mult_out[15]_sub_26_OUT_cy<7> (Msub_m6_imag[15]_mult_out[15]_sub_26_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_m6_imag[15]_mult_out[15]_sub_26_OUT_cy<8> (Msub_m6_imag[15]_mult_out[15]_sub_26_OUT_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_m6_imag[15]_mult_out[15]_sub_26_OUT_cy<9> (Msub_m6_imag[15]_mult_out[15]_sub_26_OUT_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_m6_imag[15]_mult_out[15]_sub_26_OUT_cy<10> (Msub_m6_imag[15]_mult_out[15]_sub_26_OUT_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_m6_imag[15]_mult_out[15]_sub_26_OUT_cy<11> (Msub_m6_imag[15]_mult_out[15]_sub_26_OUT_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_m6_imag[15]_mult_out[15]_sub_26_OUT_cy<12> (Msub_m6_imag[15]_mult_out[15]_sub_26_OUT_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_m6_imag[15]_mult_out[15]_sub_26_OUT_cy<13> (Msub_m6_imag[15]_mult_out[15]_sub_26_OUT_cy<13>)
+     MUXCY:CI->O           0   0.019   0.000  Msub_m6_imag[15]_mult_out[15]_sub_26_OUT_cy<14> (Msub_m6_imag[15]_mult_out[15]_sub_26_OUT_cy<14>)
+     XORCY:CI->O           1   0.180   0.000  Msub_m6_imag[15]_mult_out[15]_sub_26_OUT_xor<15> (m6_imag[15]_mult_out[15]_sub_26_OUT<15>)
+     FDE:D                     0.102          s4_imag_15
+    ----------------------------------------
+    Total                      6.728ns (4.413ns logic, 2.315ns route)
+                                       (65.6% logic, 34.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 107044 / 377
+-------------------------------------------------------------------------
+Offset:              5.381ns (Levels of Logic = 22)
+  Source:            inp1<0> (PAD)
+  Destination:       m0_15 (FF)
+  Destination Clock: clk rising
+
+  Data Path: inp1<0> to m0_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.222   0.721  inp1_0_IBUF (inp1_0_IBUF)
+     LUT2:I0->O            1   0.203   0.000  Madd_n0226_lut<0> (Madd_n0226_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Madd_n0226_cy<0> (Madd_n0226_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0226_cy<1> (Madd_n0226_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0226_cy<2> (Madd_n0226_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0226_cy<3> (Madd_n0226_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0226_cy<4> (Madd_n0226_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0226_cy<5> (Madd_n0226_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0226_cy<6> (Madd_n0226_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0226_cy<7> (Madd_n0226_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0226_cy<8> (Madd_n0226_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0226_cy<9> (Madd_n0226_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0226_cy<10> (Madd_n0226_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0226_cy<11> (Madd_n0226_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0226_cy<12> (Madd_n0226_cy<12>)
+     XORCY:CI->O           2   0.180   0.721  Madd_n0226_xor<13> (n0226<13>)
+     LUT2:I0->O            1   0.203   0.000  Madd_n0229_lut<13> (Madd_n0229_lut<13>)
+     MUXCY:S->O            1   0.172   0.000  Madd_n0229_cy<13> (Madd_n0229_cy<13>)
+     XORCY:CI->O           2   0.180   0.721  Madd_n0229_xor<14> (n0229<14>)
+     LUT2:I0->O            1   0.203   0.000  Madd_inp1[15]_inp4[15]_add_14_OUT_lut<14> (Madd_inp1[15]_inp4[15]_add_14_OUT_lut<14>)
+     MUXCY:S->O            0   0.172   0.000  Madd_inp1[15]_inp4[15]_add_14_OUT_cy<14> (Madd_inp1[15]_inp4[15]_add_14_OUT_cy<14>)
+     XORCY:CI->O           1   0.180   0.000  Madd_inp1[15]_inp4[15]_add_14_OUT_xor<15> (inp1[15]_inp4[15]_add_14_OUT<15>)
+     FDE:D                     0.102          m0_15
+    ----------------------------------------
+    Total                      5.381ns (3.217ns logic, 2.164ns route)
+                                       (59.8% logic, 40.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 585 / 225
+-------------------------------------------------------------------------
+Offset:              5.103ns (Levels of Logic = 18)
+  Source:            s3_imag_0 (FF)
+  Destination:       out4_imag<15> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: s3_imag_0 to out4_imag<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              4   0.447   0.684  s3_imag_0 (s3_imag_0)
+     LUT1:I0->O            1   0.205   0.000  Madd_out4_imag_cy<0>_rt (Madd_out4_imag_cy<0>_rt)
+     MUXCY:S->O            1   0.172   0.000  Madd_out4_imag_cy<0> (Madd_out4_imag_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out4_imag_cy<1> (Madd_out4_imag_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out4_imag_cy<2> (Madd_out4_imag_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out4_imag_cy<3> (Madd_out4_imag_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out4_imag_cy<4> (Madd_out4_imag_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out4_imag_cy<5> (Madd_out4_imag_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out4_imag_cy<6> (Madd_out4_imag_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out4_imag_cy<7> (Madd_out4_imag_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out4_imag_cy<8> (Madd_out4_imag_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out4_imag_cy<9> (Madd_out4_imag_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out4_imag_cy<10> (Madd_out4_imag_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out4_imag_cy<11> (Madd_out4_imag_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out4_imag_cy<12> (Madd_out4_imag_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out4_imag_cy<13> (Madd_out4_imag_cy<13>)
+     MUXCY:CI->O           0   0.019   0.000  Madd_out4_imag_cy<14> (Madd_out4_imag_cy<14>)
+     XORCY:CI->O           1   0.180   0.579  Madd_out4_imag_xor<15> (out4_imag_15_OBUF)
+     OBUF:I->O                 2.571          out4_imag_15_OBUF (out4_imag<15>)
+    ----------------------------------------
+    Total                      5.103ns (3.841ns logic, 1.262ns route)
+                                       (75.3% logic, 24.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    6.728|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 17.00 secs
+Total CPU time to Xst completion: 14.88 secs
+ 
+--> 
+
+
+Total memory usage is 385980 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :   11 (   0 filtered)
+
