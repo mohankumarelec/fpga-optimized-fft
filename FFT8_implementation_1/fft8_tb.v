@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-module fft8_tb;
+ module fft8_tb;
 
 	// Inputs
 	reg [15:0] inp1;

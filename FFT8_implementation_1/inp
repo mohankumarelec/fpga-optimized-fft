@@ -1,0 +1,29 @@
+
+ isim force add {/fft8_tb/inp1} 0000001110101011 -radix bin 
+ isim force add {/fft8_tb/inp2} 1111110011010111 -radix bin 
+ isim force add {/fft8_tb/inp3} 0000000111000110 -radix bin 
+ isim force add {/fft8_tb/inp4} 1111100000110001 -radix bin 
+ isim force add {/fft8_tb/inp5} 1111111000010001 -radix bin 
+ isim force add {/fft8_tb/inp6} 0000011010101110 -radix bin 
+ isim force add {/fft8_tb/inp7} 1111111111111011 -radix bin 
+ isim force add {/fft8_tb/inp8} 0000001100011111 -radix bin 
+ isim force add {/fft8_tb/clk} 1 -radix bin -value 0 -radix bin -time 2500 ps -repeat 5 ns -cancel 1 us
+ isim force add {/fft8_tb/rst} 1 -radix bin -cancel 20 ns 
+ isim force add {/fft8_tb/rst} 0 -radix bin -time 20 ps -cancel 1 us 
+ run
+ dump
+ 
+ isim force add {/fft8_tb/inp1} 1111111101010110 -radix bin 
+ isim force add {/fft8_tb/inp2} 0000001000010111 -radix bin 
+ isim force add {/fft8_tb/inp3} 0000001111100101 -radix bin 
+ isim force add {/fft8_tb/inp4} 0000000011100000 -radix bin 
+ isim force add {/fft8_tb/inp5} 1111101100100010 -radix bin 
+ isim force add {/fft8_tb/inp6} 0000010100111111 -radix bin 
+ isim force add {/fft8_tb/inp7} 1111111010101100 -radix bin 
+ isim force add {/fft8_tb/inp8} 0000010110010011 -radix bin 
+ isim force add {/fft8_tb/clk} 1 -radix bin -value 0 -radix bin -time 2500 ps -repeat 5 ns -cancel 1 us
+ isim force add {/fft8_tb/rst} 1 -radix bin -cancel 20 ns 
+ isim force add {/fft8_tb/rst} 0 -radix bin -time 20 ps -cancel 1 us 
+ run
+ dump
+ 

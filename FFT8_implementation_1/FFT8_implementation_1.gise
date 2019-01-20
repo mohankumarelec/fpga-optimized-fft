@@ -41,6 +41,7 @@
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="isim.wdb"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
@@ -51,7 +52,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1547644239" xil_pn:in_ck="4954152636550840685" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1547644239">
+    <transform xil_pn:end_ts="1547734972" xil_pn:in_ck="4954152636550840685" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1547734972">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="fft8.v"/>
@@ -69,13 +70,13 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1547644239" xil_pn:in_ck="4954152636550840685" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1547644239">
+    <transform xil_pn:end_ts="1547734972" xil_pn:in_ck="4954152636550840685" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1547734972">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="fft8.v"/>
       <outfile xil_pn:name="fft8_tb.v"/>
     </transform>
-    <transform xil_pn:end_ts="1547644242" xil_pn:in_ck="4954152636550840685" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="8191341502634420744" xil_pn:start_ts="1547644239">
+    <transform xil_pn:end_ts="1547734975" xil_pn:in_ck="4954152636550840685" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="8191341502634420744" xil_pn:start_ts="1547734972">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -87,7 +88,7 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1547644243" xil_pn:in_ck="-3463037581945269924" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2751562764282560949" xil_pn:start_ts="1547644243">
+    <transform xil_pn:end_ts="1547828626" xil_pn:in_ck="-3463037581945269924" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2751562764282560949" xil_pn:start_ts="1547828626">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -95,6 +96,7 @@
       <outfile xil_pn:name="fft8_tb_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="isim.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1547602620" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1547602620">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -128,6 +130,10 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="fft8.lso"/>
       <outfile xil_pn:name="fft8.ngc"/>

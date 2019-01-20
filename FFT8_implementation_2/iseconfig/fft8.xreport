@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2019-01-16T13:56:38</DateModified>
+  <DateModified>2019-01-18T23:38:54</DateModified>
   <ModuleName>fft8</ModuleName>
   <SummaryTimeStamp>2019-01-16T04:30:22</SummaryTimeStamp>
   <SavedFilePath>/home/ise/DDP/xilinx project/FFT8_implementation_2/iseconfig/fft8.xreport</SavedFilePath>

@@ -1,0 +1,2 @@
+ISim log file
+Running: /home/ise/DDP/xilinx project/FFT8_implementation_3/fft8_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/ise/DDP/xilinx project/FFT8_implementation_3/fft8_tb_isim_beh.wdb 

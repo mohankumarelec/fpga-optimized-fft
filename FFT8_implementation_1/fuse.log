@@ -8,14 +8,14 @@ Analyzing Verilog file "/home/ise/DDP/xilinx project/FFT8_implementation_1/fft8_
 Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 94968 KB
-Fuse CPU Usage: 1270 ms
+Fuse Memory Usage: 94972 KB
+Fuse CPU Usage: 1320 ms
 Compiling module fft8
 Compiling module fft8_tb
 Compiling module glbl
 Time Resolution for simulation is 1ps.
 Compiled 3 Verilog Units
 Built simulation executable /home/ise/DDP/xilinx project/FFT8_implementation_1/fft8_tb_isim_beh.exe
-Fuse Memory Usage: 98212 KB
-Fuse CPU Usage: 1300 ms
+Fuse Memory Usage: 98216 KB
+Fuse CPU Usage: 1350 ms
 GCC CPU Usage: 340 ms

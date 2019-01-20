@@ -1,0 +1,22 @@
+\BOOKMARK [1][-]{section.1}{Cooley\205Tukey algorithm }{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Overview}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Calculation}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Implementation}{section.1}% 4
+\BOOKMARK [2][-]{subsection.1.4}{Analysis}{section.1}% 5
+\BOOKMARK [1][-]{section.2}{Modified Cooley\205Tukey algorithm }{}% 6
+\BOOKMARK [2][-]{subsection.2.1}{Overview}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.2}{Calculation}{section.2}% 8
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Group 1}{subsection.2.2}% 9
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Group 2}{subsection.2.2}% 10
+\BOOKMARK [2][-]{subsection.2.3}{Implementation}{section.2}% 11
+\BOOKMARK [2][-]{subsection.2.4}{Analysis}{section.2}% 12
+\BOOKMARK [1][-]{section.3}{Modified Cooley\205Tukey algorithm using LUT based Multiplier}{}% 13
+\BOOKMARK [2][-]{subsection.3.1}{Overview}{section.3}% 14
+\BOOKMARK [2][-]{subsection.3.2}{Implementation}{section.3}% 15
+\BOOKMARK [2][-]{subsection.3.3}{Analysis}{section.3}% 16
+\BOOKMARK [1][-]{section.4}{Validation Script}{}% 17
+\BOOKMARK [2][-]{subsection.4.1}{Requirements}{section.4}% 18
+\BOOKMARK [2][-]{subsection.4.2}{Sample Usage}{section.4}% 19
+\BOOKMARK [1][-]{section.5}{Project URL}{}% 20
+\BOOKMARK [1][-]{section.6}{Design Summary}{}% 21
+\BOOKMARK [1][-]{section.7}{To Do \(in upcoming months\)}{}% 22

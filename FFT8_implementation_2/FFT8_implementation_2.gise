@@ -78,10 +78,9 @@
       <outfile xil_pn:name="fft8_tb.v"/>
       <outfile xil_pn:name="multiplier.v"/>
     </transform>
-    <transform xil_pn:end_ts="1547643819" xil_pn:in_ck="772911732247066488" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="8191341502634420744" xil_pn:start_ts="1547643815">
+    <transform xil_pn:end_ts="1547684649" xil_pn:in_ck="772911732247066488" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="8191341502634420744" xil_pn:start_ts="1547684645">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fft8_tb_beh.prj"/>
@@ -91,11 +90,9 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1547643819" xil_pn:in_ck="2691493219036281447" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2751562764282560949" xil_pn:start_ts="1547643819">
+    <transform xil_pn:end_ts="1547691779" xil_pn:in_ck="2691493219036281447" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2751562764282560949" xil_pn:start_ts="1547691778">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fft8_tb_isim_beh.wdb"/>
@@ -134,6 +131,8 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="fft8.lso"/>
       <outfile xil_pn:name="fft8.ngc"/>
