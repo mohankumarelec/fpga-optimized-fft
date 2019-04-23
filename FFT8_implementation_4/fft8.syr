@@ -1,0 +1,702 @@
+Release 14.7 - xst P.20160913 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Reading design: fft8.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "fft8.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "fft8"
+Output Format                      : NGC
+Target Device                      : xa6slx4-3-csg225
+
+---- Source Options
+Top Module Name                    : fft8
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/ise/DDP/xilinx project/FFT8_implementation_4/multiplier.v" into library work
+Parsing module <multiplier>.
+Analyzing Verilog file "/home/ise/DDP/xilinx project/FFT8_implementation_4/fft8.v" into library work
+Parsing module <fft8>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <fft8>.
+
+Elaborating module <multiplier>.
+WARNING:HDLCompiler:413 - "/home/ise/DDP/xilinx project/FFT8_implementation_4/multiplier.v" Line 98: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/DDP/xilinx project/FFT8_implementation_4/fft8.v" Line 83: Result of 30-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/DDP/xilinx project/FFT8_implementation_4/fft8.v" Line 100: Result of 30-bit expression is truncated to fit in 16-bit target.
+"/home/ise/DDP/xilinx project/FFT8_implementation_4/fft8.v" Line 112. $display out1: 0.000000 , 0.000000 
+"/home/ise/DDP/xilinx project/FFT8_implementation_4/fft8.v" Line 113. $display out2: 0.000000 , 0.000000 
+"/home/ise/DDP/xilinx project/FFT8_implementation_4/fft8.v" Line 114. $display out3: 0.000000 , 0.000000 
+"/home/ise/DDP/xilinx project/FFT8_implementation_4/fft8.v" Line 115. $display out4: 0.000000 , 0.000000 
+"/home/ise/DDP/xilinx project/FFT8_implementation_4/fft8.v" Line 116. $display out5: 0.000000 , 0.000000 
+"/home/ise/DDP/xilinx project/FFT8_implementation_4/fft8.v" Line 117. $display out6: 0.000000 , 0.000000 
+"/home/ise/DDP/xilinx project/FFT8_implementation_4/fft8.v" Line 118. $display out7: 0.000000 , 0.000000 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <fft8>.
+    Related source file is "/home/ise/DDP/xilinx project/FFT8_implementation_4/fft8.v".
+    Found 1-bit register for signal <mult_rst>.
+    Found 16-bit register for signal <t1>.
+    Found 16-bit register for signal <t2>.
+    Found 16-bit register for signal <t3>.
+    Found 16-bit register for signal <t5>.
+    Found 16-bit register for signal <m3>.
+    Found 16-bit register for signal <m6_imag>.
+    Found 16-bit register for signal <t4>.
+    Found 16-bit register for signal <t6>.
+    Found 16-bit register for signal <t8>.
+    Found 16-bit register for signal <t7>.
+    Found 16-bit register for signal <out1_real>.
+    Found 32-bit register for signal <mult_inp1>.
+    Found 16-bit register for signal <mult_inp2>.
+    Found 2-bit register for signal <stage>.
+    Found 16-bit register for signal <m4>.
+    Found 16-bit register for signal <out3_imag>.
+    Found 16-bit register for signal <out3_real>.
+    Found 16-bit register for signal <out5_real>.
+    Found 16-bit register for signal <out2_real>.
+    Found 16-bit register for signal <out4_real>.
+    Found 16-bit register for signal <out2_imag>.
+    Found 16-bit register for signal <out6_imag>.
+    Found 1-bit register for signal <out_stb>.
+    Found finite state machine <FSM_0> for signal <stage>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 5                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Power Up State     | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16-bit subtractor for signal <inp1[15]_inp5[15]_sub_10_OUT> created at line 75.
+    Found 16-bit subtractor for signal <inp7[15]_inp3[15]_sub_11_OUT> created at line 76.
+    Found 16-bit subtractor for signal <inp2[15]_inp6[15]_sub_12_OUT> created at line 77.
+    Found 16-bit subtractor for signal <inp4[15]_inp8[15]_sub_13_OUT> created at line 78.
+    Found 17-bit subtractor for signal <inp2[15]_inp4[15]_sub_17_OUT> created at line 82.
+    Found 16-bit subtractor for signal <t5[15]_t3[15]_sub_21_OUT> created at line 96.
+    Found 16-bit subtractor for signal <t1[15]_t2[15]_sub_22_OUT> created at line 97.
+    Found 16-bit subtractor for signal <t7[15]_t8[15]_sub_23_OUT> created at line 98.
+    Found 16-bit subtractor for signal <m3[15]_m4[15]_sub_29_OUT> created at line 108.
+    Found 16-bit subtractor for signal <m6_imag[15]_mult_out[15]_sub_31_OUT> created at line 110.
+    Found 16-bit adder for signal <n0268> created at line 71.
+    Found 16-bit adder for signal <n0269> created at line 72.
+    Found 16-bit adder for signal <n0266> created at line 73.
+    Found 16-bit adder for signal <n0265> created at line 74.
+    Found 16-bit adder for signal <n0272> created at line 79.
+    Found 16-bit adder for signal <n0271> created at line 80.
+    Found 16-bit adder for signal <inp1[15]_inp4[15]_add_15_OUT> created at line 81.
+    Found 16-bit adder for signal <m3[15]_m4[15]_add_27_OUT> created at line 107.
+    Found 16-bit adder for signal <m6_imag[15]_mult_out[15]_add_29_OUT> created at line 109.
+    Found 16-bit adder for signal <out4_imag> created at line 131.
+    Found 16-bit adder for signal <out7_imag> created at line 137.
+    Found 16-bit adder for signal <out8_imag> created at line 139.
+    Found 32-bit adder for signal <_n0289> created at line 99.
+    Found 32-bit subtractor for signal <t4[15]_t6[15]_sub_25_OUT> created at line 99.
+    Summary:
+	inferred  24 Adder/Subtractor(s).
+	inferred 354 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <fft8> synthesized.
+
+Synthesizing Unit <multiplier>.
+    Related source file is "/home/ise/DDP/xilinx project/FFT8_implementation_4/multiplier.v".
+    Found 32-bit register for signal <sin>.
+    Found 32-bit register for signal <angle>.
+    Found 32-bit register for signal <cos>.
+    Found 5-bit register for signal <count>.
+    Found 1-bit register for signal <state>.
+    Found 32-bit subtractor for signal <sin_shr[31]_unary_minus_6_OUT> created at line 95.
+    Found 32-bit subtractor for signal <cos_shr[31]_unary_minus_9_OUT> created at line 96.
+    Found 32-bit subtractor for signal <beta[31]_unary_minus_12_OUT> created at line 97.
+    Found 32-bit adder for signal <cos[31]_sin_shr[31]_add_7_OUT> created at line 95.
+    Found 32-bit adder for signal <sin[31]_cos_shr[31]_add_10_OUT> created at line 96.
+    Found 32-bit adder for signal <angle[31]_beta[31]_add_13_OUT> created at line 97.
+    Found 5-bit adder for signal <count[4]_GND_2_o_add_14_OUT> created at line 98.
+    Found 17x16-bit multiplier for signal <n0144> created at line 102.
+    Found 64-bit shifter logical right for signal <n0099> created at line 119
+    Found 64-bit shifter logical right for signal <n0100> created at line 120
+    Found 32x32-bit Read Only RAM for signal <beta>
+WARNING:Xst:737 - Found 1-bit latch for signal <out_stb_reg>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sin_final<23>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sin_final<22>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sin_final<21>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sin_final<20>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sin_final<19>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sin_final<18>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sin_final<17>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sin_final<16>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sin_final<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sin_final<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sin_final<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sin_final<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sin_final<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sin_final<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sin_final<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sin_final<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Multiplier(s).
+	inferred   7 Adder/Subtractor(s).
+	inferred 102 D-type flip-flop(s).
+	inferred  17 Latch(s).
+	inferred   8 Multiplexer(s).
+	inferred   2 Combinational logic shifter(s).
+Unit <multiplier> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 32x32-bit single-port Read Only RAM                   : 1
+# Multipliers                                          : 1
+ 17x16-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 31
+ 16-bit adder                                          : 12
+ 16-bit subtractor                                     : 9
+ 17-bit subtractor                                     : 1
+ 32-bit adder                                          : 4
+ 32-bit subtractor                                     : 4
+ 5-bit adder                                           : 1
+# Registers                                            : 28
+ 1-bit register                                        : 3
+ 16-bit register                                       : 20
+ 32-bit register                                       : 4
+ 5-bit register                                        : 1
+# Latches                                              : 17
+ 1-bit latch                                           : 17
+# Multiplexers                                         : 10
+ 1-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 8
+ 5-bit 2-to-1 multiplexer                              : 1
+# Logic shifters                                       : 2
+ 64-bit shifter logical right                          : 2
+# FSMs                                                 : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <out_stb_reg> (without init value) has a constant value of 1 in block <mult>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mult_inp2_15> (without init value) has a constant value of 1 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mult_inp2_14> (without init value) has a constant value of 1 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mult_inp2_13> (without init value) has a constant value of 1 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mult_inp2_12> (without init value) has a constant value of 1 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mult_inp2_11> (without init value) has a constant value of 0 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mult_inp2_10> (without init value) has a constant value of 1 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mult_inp2_9> (without init value) has a constant value of 1 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mult_inp2_8> (without init value) has a constant value of 0 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mult_inp2_7> (without init value) has a constant value of 1 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mult_inp2_6> (without init value) has a constant value of 0 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mult_inp2_5> (without init value) has a constant value of 1 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mult_inp2_4> (without init value) has a constant value of 0 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mult_inp2_3> (without init value) has a constant value of 1 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mult_inp2_2> (without init value) has a constant value of 0 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mult_inp2_1> (without init value) has a constant value of 0 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mult_inp2_0> (without init value) has a constant value of 1 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <multiplier>.
+The following registers are absorbed into accumulator <sin>: 1 register on signal <sin>.
+The following registers are absorbed into accumulator <angle>: 1 register on signal <angle>.
+The following registers are absorbed into accumulator <cos>: 1 register on signal <cos>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_beta> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <count>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <beta>          |          |
+    -----------------------------------------------------------------------
+Unit <multiplier> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 32x32-bit single-port distributed Read Only RAM       : 1
+# Multipliers                                          : 1
+ 17x16-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 27
+ 16-bit adder                                          : 12
+ 16-bit subtractor                                     : 9
+ 17-bit subtractor                                     : 1
+ 32-bit adder                                          : 1
+ 32-bit subtractor                                     : 4
+# Counters                                             : 1
+ 5-bit up counter                                      : 1
+# Accumulators                                         : 3
+ 32-bit up loadable accumulator                        : 3
+# Registers                                            : 355
+ Flip-Flops                                            : 355
+# Multiplexers                                         : 6
+ 1-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 5
+# Logic shifters                                       : 2
+ 64-bit shifter logical right                          : 2
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <out_stb_reg> (without init value) has a constant value of 1 in block <multiplier>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <mult_inp2_0> (without init value) has a constant value of 1 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mult_inp2_1> (without init value) has a constant value of 0 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mult_inp2_2> (without init value) has a constant value of 0 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mult_inp2_3> (without init value) has a constant value of 1 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mult_inp2_4> (without init value) has a constant value of 0 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mult_inp2_5> (without init value) has a constant value of 1 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mult_inp2_6> (without init value) has a constant value of 0 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mult_inp2_7> (without init value) has a constant value of 1 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mult_inp2_8> (without init value) has a constant value of 0 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mult_inp2_9> (without init value) has a constant value of 1 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mult_inp2_10> (without init value) has a constant value of 1 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mult_inp2_11> (without init value) has a constant value of 0 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mult_inp2_12> (without init value) has a constant value of 1 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mult_inp2_13> (without init value) has a constant value of 1 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mult_inp2_14> (without init value) has a constant value of 1 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mult_inp2_15> (without init value) has a constant value of 1 in block <fft8>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <stage[1:2]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 11    | 01
+ 01    | 10
+ 10    | 11
+-------------------
+INFO:Xst:2261 - The FF/Latch <mult_inp1_17> in Unit <fft8> is equivalent to the following 14 FFs/Latches, which will be removed : <mult_inp1_18> <mult_inp1_19> <mult_inp1_20> <mult_inp1_21> <mult_inp1_22> <mult_inp1_23> <mult_inp1_24> <mult_inp1_25> <mult_inp1_26> <mult_inp1_27> <mult_inp1_28> <mult_inp1_29> <mult_inp1_30> <mult_inp1_31> 
+
+Optimizing unit <fft8> ...
+
+Optimizing unit <multiplier> ...
+INFO:Xst:2261 - The FF/Latch <mult/angle_31> in Unit <fft8> is equivalent to the following FF/Latch, which will be removed : <mult/angle_30> 
+INFO:Xst:2261 - The FF/Latch <t8_0> in Unit <fft8> is equivalent to the following FF/Latch, which will be removed : <mult_inp1_0> 
+INFO:Xst:2261 - The FF/Latch <t1_0> in Unit <fft8> is equivalent to the following FF/Latch, which will be removed : <m3_0> 
+INFO:Xst:2261 - The FF/Latch <t2_0> in Unit <fft8> is equivalent to the following FF/Latch, which will be removed : <m6_imag_0> 
+INFO:Xst:2261 - The FF/Latch <t3_0> in Unit <fft8> is equivalent to the following FF/Latch, which will be removed : <t4_0> 
+INFO:Xst:2261 - The FF/Latch <s1_0> in Unit <fft8> is equivalent to the following FF/Latch, which will be removed : <s2_0> 
+INFO:Xst:2261 - The FF/Latch <s3_imag_0> in Unit <fft8> is equivalent to the following FF/Latch, which will be removed : <s4_imag_0> 
+INFO:Xst:2261 - The FF/Latch <t5_0> in Unit <fft8> is equivalent to the following FF/Latch, which will be removed : <t6_0> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block fft8, actual ratio is 49.
+FlipFlop mult/count_0 has been replicated 6 time(s)
+FlipFlop mult/count_1 has been replicated 4 time(s)
+FlipFlop mult/count_2 has been replicated 5 time(s)
+FlipFlop mult/count_3 has been replicated 5 time(s)
+FlipFlop mult/count_4 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 442
+ Flip-Flops                                            : 442
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : fft8.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2095
+#      GND                         : 1
+#      INV                         : 66
+#      LUT1                        : 3
+#      LUT2                        : 420
+#      LUT3                        : 47
+#      LUT4                        : 50
+#      LUT5                        : 158
+#      LUT6                        : 198
+#      MUXCY                       : 550
+#      MUXF7                       : 28
+#      VCC                         : 1
+#      XORCY                       : 573
+# FlipFlops/Latches                : 458
+#      FD                          : 4
+#      FDC                         : 123
+#      FDE                         : 315
+#      LDE                         : 16
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 386
+#      IBUF                        : 129
+#      OBUF                        : 257
+# DSPs                             : 1
+#      DSP48A1                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : xa6slx4csg225-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             458  out of   4800     9%  
+ Number of Slice LUTs:                  942  out of   2400    39%  
+    Number used as Logic:               942  out of   2400    39%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1137
+   Number with an unused Flip Flop:     679  out of   1137    59%  
+   Number with an unused LUT:           195  out of   1137    17%  
+   Number of fully used LUT-FF pairs:   263  out of   1137    23%  
+   Number of unique control sets:         8
+
+IO Utilization: 
+ Number of IOs:                         387
+ Number of bonded IOBs:                 387  out of    132   293% (*) 
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of DSP48A1s:                      1  out of      8    12%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 442   |
+mult/state                         | NONE(mult/sin_final_8) | 16    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 6.266ns (Maximum Frequency: 159.593MHz)
+   Minimum input arrival time before clock: 5.381ns
+   Maximum output required time after clock: 5.103ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.266ns (frequency: 159.593MHz)
+  Total number of paths / destination ports: 639173 / 692
+-------------------------------------------------------------------------
+Delay:               6.266ns (Levels of Logic = 36)
+  Source:            mult/cos_31 (FF)
+  Destination:       mult/sin_31 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: mult/cos_31 to mult/sin_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             53   0.447   1.568  mult/cos_31 (mult/cos_31)
+     LUT5:I4->O            9   0.205   0.830  mult/Sh2211 (mult/Sh221)
+     LUT6:I5->O            4   0.205   0.684  mult/Sh2731 (mult/Sh273)
+     LUT5:I4->O            1   0.205   0.000  mult/Msub_cos_shr[31]_unary_minus_9_OUT_lut<1> (mult/Msub_cos_shr[31]_unary_minus_9_OUT_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<1> (mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<2> (mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<3> (mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<4> (mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<5> (mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<6> (mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<7> (mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<8> (mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<9> (mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<10> (mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<11> (mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<12> (mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<13> (mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<14> (mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<15> (mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<16> (mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<17> (mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<18> (mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<19> (mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<20> (mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<21> (mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<22> (mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<23> (mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<24> (mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<25> (mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<26> (mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<27> (mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<28> (mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<29> (mult/Msub_cos_shr[31]_unary_minus_9_OUT_cy<29>)
+     XORCY:CI->O           1   0.180   0.580  mult/Msub_cos_shr[31]_unary_minus_9_OUT_xor<30> (mult/cos_shr[31]_unary_minus_9_OUT<30>)
+     LUT5:I4->O            1   0.205   0.000  mult/Maccum_sin_lut<30> (mult/Maccum_sin_lut<30>)
+     MUXCY:S->O            0   0.172   0.000  mult/Maccum_sin_cy<30> (mult/Maccum_sin_cy<30>)
+     XORCY:CI->O           1   0.180   0.000  mult/Maccum_sin_xor<31> (mult/Result<31>1)
+     FDC:D                     0.102          mult/sin_31
+    ----------------------------------------
+    Total                      6.266ns (2.605ns logic, 3.661ns route)
+                                       (41.6% logic, 58.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 109333 / 381
+-------------------------------------------------------------------------
+Offset:              5.381ns (Levels of Logic = 22)
+  Source:            inp1<0> (PAD)
+  Destination:       m0_15 (FF)
+  Destination Clock: clk rising
+
+  Data Path: inp1<0> to m0_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.222   0.721  inp1_0_IBUF (inp1_0_IBUF)
+     LUT2:I0->O            1   0.203   0.000  Madd_n0268_lut<0> (Madd_n0268_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Madd_n0268_cy<0> (Madd_n0268_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0268_cy<1> (Madd_n0268_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0268_cy<2> (Madd_n0268_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0268_cy<3> (Madd_n0268_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0268_cy<4> (Madd_n0268_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0268_cy<5> (Madd_n0268_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0268_cy<6> (Madd_n0268_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0268_cy<7> (Madd_n0268_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0268_cy<8> (Madd_n0268_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0268_cy<9> (Madd_n0268_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0268_cy<10> (Madd_n0268_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0268_cy<11> (Madd_n0268_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0268_cy<12> (Madd_n0268_cy<12>)
+     XORCY:CI->O           2   0.180   0.721  Madd_n0268_xor<13> (n0268<13>)
+     LUT2:I0->O            1   0.203   0.000  Madd_n0271_lut<13> (Madd_n0271_lut<13>)
+     MUXCY:S->O            1   0.172   0.000  Madd_n0271_cy<13> (Madd_n0271_cy<13>)
+     XORCY:CI->O           2   0.180   0.721  Madd_n0271_xor<14> (n0271<14>)
+     LUT2:I0->O            1   0.203   0.000  Madd_inp1[15]_inp4[15]_add_15_OUT_lut<14> (Madd_inp1[15]_inp4[15]_add_15_OUT_lut<14>)
+     MUXCY:S->O            0   0.172   0.000  Madd_inp1[15]_inp4[15]_add_15_OUT_cy<14> (Madd_inp1[15]_inp4[15]_add_15_OUT_cy<14>)
+     XORCY:CI->O           1   0.180   0.000  Madd_inp1[15]_inp4[15]_add_15_OUT_xor<15> (inp1[15]_inp4[15]_add_15_OUT<15>)
+     FDE:D                     0.102          m0_15
+    ----------------------------------------
+    Total                      5.381ns (3.217ns logic, 2.164ns route)
+                                       (59.8% logic, 40.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 585 / 225
+-------------------------------------------------------------------------
+Offset:              5.103ns (Levels of Logic = 18)
+  Source:            s3_imag_0 (FF)
+  Destination:       out4_imag<15> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: s3_imag_0 to out4_imag<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              4   0.447   0.684  s3_imag_0 (s3_imag_0)
+     LUT1:I0->O            1   0.205   0.000  Madd_out8_imag_cy<0>_rt (Madd_out8_imag_cy<0>_rt)
+     MUXCY:S->O            1   0.172   0.000  Madd_out8_imag_cy<0> (Madd_out8_imag_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out8_imag_cy<1> (Madd_out8_imag_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out8_imag_cy<2> (Madd_out8_imag_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out8_imag_cy<3> (Madd_out8_imag_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out8_imag_cy<4> (Madd_out8_imag_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out8_imag_cy<5> (Madd_out8_imag_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out8_imag_cy<6> (Madd_out8_imag_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out8_imag_cy<7> (Madd_out8_imag_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out8_imag_cy<8> (Madd_out8_imag_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out8_imag_cy<9> (Madd_out8_imag_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out8_imag_cy<10> (Madd_out8_imag_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out8_imag_cy<11> (Madd_out8_imag_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out8_imag_cy<12> (Madd_out8_imag_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_out8_imag_cy<13> (Madd_out8_imag_cy<13>)
+     MUXCY:CI->O           0   0.019   0.000  Madd_out8_imag_cy<14> (Madd_out8_imag_cy<14>)
+     XORCY:CI->O           1   0.180   0.579  Madd_out8_imag_xor<15> (out8_imag_15_OBUF)
+     OBUF:I->O                 2.571          out8_imag_15_OBUF (out8_imag<15>)
+    ----------------------------------------
+    Total                      5.103ns (3.841ns logic, 1.262ns route)
+                                       (75.3% logic, 24.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    6.266|         |         |         |
+mult/state     |         |    2.074|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock mult/state
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    5.987|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 27.00 secs
+Total CPU time to Xst completion: 23.15 secs
+ 
+--> 
+
+
+Total memory usage is 390040 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   55 (   0 filtered)
+Number of infos    :   12 (   0 filtered)
+

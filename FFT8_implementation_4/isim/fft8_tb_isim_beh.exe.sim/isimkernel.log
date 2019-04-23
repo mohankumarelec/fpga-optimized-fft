@@ -1,0 +1,28 @@
+Command line:
+   fft8_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  45427
+
+Wed Apr 10 18:46:07 2019
+
+
+ Elaboration Time: 0.12 sec
+
+ Current Memory Usage: 201.794 Meg
+
+ Total Signals          : 73
+ Total Nets             : 1652
+ Total Signal Drivers   : 76
+ Total Blocks           : 4
+ Total Primitive Blocks : 2
+ Total Processes        : 83
+ Total Traceable Variables  : 72
+ Total Scalar Nets and Variables : 2601
+
+ Total Simulation Time: 0.14 sec
+
+ Current Memory Usage: 279.392 Meg
+
+Wed Apr 10 18:46:18 2019
+
